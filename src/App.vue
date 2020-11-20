@@ -5,12 +5,15 @@
 
 <script>
 import moment from "moment";
+import LineChart from "./components/LineChart";
 export default {
   mounted() {
     this.$store.dispatch("logApi");
   },
   name: "App",
-  component: {},
+  component: {
+    LineChart,
+  },
 };
 </script>
 <style>
