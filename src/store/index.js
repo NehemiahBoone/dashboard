@@ -13,8 +13,9 @@ export default new Vuex.Store({
   actions: {
     async logApi({ commit, dispatch }) {
       try {
-        let something = api.get("/current.json")
-        console.log(something)
+        debugger
+        let something = await api.get("/daily")
+        console.log(something.data)
       } catch (error) {
         console.error(error);
       }

@@ -4,6 +4,7 @@
 
 
 <script>
+import moment from "moment";
 export default {
   mounted() {
     this.$store.dispatch("logApi");
