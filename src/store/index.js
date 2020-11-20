@@ -17,7 +17,6 @@ export default new Vuex.Store({
   mutations: {
     setPositive(state, positiveObj) {
       state.arrPositive.push(positiveObj)
-      console.log(state.arrPositive)
     },
     setHospitalized(state, hospitalizedObj) {
       state.arrHospitalized.push(hospitalizedObj)
@@ -39,7 +38,6 @@ export default new Vuex.Store({
     async getCovidInfo({ commit, dispatch }) {
       try {
         let info = await api.get("/daily")
-        console.log(info.data)
         dispatch("mapData", info.data)
       } catch (error) {
         console.error(error);

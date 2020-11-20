@@ -1,8 +1,23 @@
 <script>
 import { Line } from "vue-chartjs";
 export default {
+  name: "LineChart",
+  extends: Line,
+  props: {
+    label: {
+      type: String,
+    },
+    chartData: {
+      type: Array,
+    },
+    options: {
+      type: Object,
+    },
+  },
   mounted() {
-    let dates = this.chartData.map((d) => d.data).reverse();
+    debugger;
+    let dates = this.chartData.map((d) => d.date).reverse();
+    console.log(dates);
     let totals = this.chartData.map((d) => d.total).reverse();
 
     this.renderChart(
@@ -17,19 +32,6 @@ export default {
       },
       this.options
     );
-  },
-  name: "LineChart",
-  extends: Line,
-  props: {
-    label: {
-      type: String,
-    },
-    chartData: {
-      type: Array,
-    },
-    options: {
-      type: Object,
-    },
   },
 };
 </script>
