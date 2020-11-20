@@ -25,6 +25,11 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    positive() {
+      return this.$store.state.arrPositive;
+    },
+  },
   component: {
     LineChart,
   },

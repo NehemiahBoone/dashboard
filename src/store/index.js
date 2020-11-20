@@ -21,21 +21,22 @@ export default new Vuex.Store({
   mutations: {
     setPositive(state, positiveObj) {
       state.arrPositive.push(positiveObj)
+      console.log(state.arrPositive)
     },
     setHospitalized(state, hospitalizedObj) {
-
+      state.arrHospitalized.push(hospitalizedObj)
     },
     setInIcu(state, inIcuObj) {
-
+      state.arrInIcu.push(inIcuObj)
     },
     setOnVentilators(state, onVentilatorsObj) {
-
+      state.arrOnVentilators.push(onVentilatorsObj)
     },
     setRecovered(state, recoveredObj) {
-
+      state.arrRecovered.push(recoveredObj)
     },
     setDeaths(state, deathsObj) {
-
+      state.arrDeaths.push(deathsObj)
     }
   },
   actions: {
