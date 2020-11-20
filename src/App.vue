@@ -5,6 +5,9 @@
 
 <script>
 export default {
+  mounted() {
+    this.$store.dispatch("logApi");
+  },
   name: "App",
   component: {},
 };

@@ -5,6 +5,6 @@ let baseUrl = location.host.includes("localhost")
   : "/";
 
 export const api = Axios.create({
-  baseURL: "https://covidtracking.com/api/us.daily",
+  baseURL: "https://api.covidtracking.com/v1/us",
   timeout: 7500
 })
