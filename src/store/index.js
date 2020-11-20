@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { api } from "../services/AxiosService"
+import moment from "moment"
 
 Vue.use(Vuex)
 
@@ -11,11 +12,22 @@ export default new Vuex.Store({
 
   },
   actions: {
-    async logApi({ commit, dispatch }) {
+    async getCovidInfo({ commit, dispatch }) {
       try {
         debugger
-        let something = await api.get("/daily")
-        console.log(something.data)
+        let info = await api.get("/daily")
+        console.log(info.data)
+        dispatch("mapData", info.data)
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async mapData({ commit, dispatch }, data) {
+      try {
+        for (let i = 0; i < data.length; i++) {
+          let set = data[i]
+          let date = moment(set.date, "YYYYMMDD").format("MM/DD");
+        }
       } catch (error) {
         console.error(error);
       }
