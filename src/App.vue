@@ -23,18 +23,7 @@ export default {
   },
   name: "App",
   data() {
-    return {
-      arrPositive: [],
-      arrHospitalized: [],
-      arrInIcu: [],
-      arrOnVentilators: [],
-      arrRecovered: [],
-      arrDeaths: [],
-      chartOptions: {
-        responsive: true,
-        maintainAspectRatio: false,
-      },
-    };
+    return {};
   },
   component: {
     LineChart,

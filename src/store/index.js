@@ -7,9 +7,36 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    arrPositive: [],
+    arrHospitalized: [],
+    arrInIcu: [],
+    arrOnVentilators: [],
+    arrRecovered: [],
+    arrDeaths: [],
+    chartOptions: {
+      responsive: true,
+      maintainAspectRatio: false,
+    },
   },
   mutations: {
+    setPositive(state, positiveObj) {
+      state.arrPositive.push(positiveObj)
+    },
+    setHospitalized(state, hospitalizedObj) {
 
+    },
+    setInIcu(state, inIcuObj) {
+
+    },
+    setOnVentilators(state, onVentilatorsObj) {
+
+    },
+    setRecovered(state, recoveredObj) {
+
+    },
+    setDeaths(state, deathsObj) {
+
+    }
   },
   actions: {
     async getCovidInfo({ commit, dispatch }) {
