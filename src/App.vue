@@ -29,6 +29,18 @@ export default {
     positive() {
       return this.$store.state.arrPositive;
     },
+    hospitalized() {
+      return this.$store.state.arrHospitalized;
+    },
+    inIcu() {
+      return this.$store.state.arrInIcu;
+    },
+    recovered() {
+      return this.$store.state.arrRecovered;
+    },
+    deaths() {
+      return this.$store.state.deaths;
+    },
   },
   component: {
     LineChart,
