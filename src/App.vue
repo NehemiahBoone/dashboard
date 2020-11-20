@@ -1,13 +1,13 @@
 <template>
   <div id="app" class="container">
-    <div class="row mt-5" v-if="arrPositive.length > 0">
+    <div class="row mt-5" v-if="positive.length > 0">
       <div class="col">
         <h2>Positive</h2>
         <line-chart
-          :chartData="arrPositive"
+          :chartData="positive"
           :options="chartOptions"
           label="Positive"
-        ></line-chart>
+        />
       </div>
     </div>
   </div>
@@ -16,14 +16,20 @@
 
 <script>
 import moment from "moment";
-import LineChart from "./components/LineChart";
+import LineChart from "./components/LineChart.vue";
 export default {
+  components: { LineChart },
   mounted() {
     this.$store.dispatch("getCovidInfo");
   },
   name: "App",
   data() {
-    return {};
+    return {
+      chartOptions: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    };
   },
   computed: {
     positive() {

@@ -18,6 +18,7 @@ export default {
       this.options
     );
   },
+  name: "LineChart",
   extends: Line,
   props: {
     label: {

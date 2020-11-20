@@ -13,10 +13,6 @@ export default new Vuex.Store({
     arrOnVentilators: [],
     arrRecovered: [],
     arrDeaths: [],
-    chartOptions: {
-      responsive: true,
-      maintainAspectRatio: false,
-    },
   },
   mutations: {
     setPositive(state, positiveObj) {
@@ -42,7 +38,6 @@ export default new Vuex.Store({
   actions: {
     async getCovidInfo({ commit, dispatch }) {
       try {
-        debugger
         let info = await api.get("/daily")
         console.log(info.data)
         dispatch("mapData", info.data)
