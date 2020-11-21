@@ -21,6 +21,14 @@
         <h2>In ICU</h2>
         <line-chart :chartData="inIcu" :options="chartOptions" label="In ICU" />
       </div>
+      <div class="col-12">
+        <h2>Recovered</h2>
+        <line-chart
+          :chartData="recovered"
+          :options="chartOptions"
+          label="Recovered"
+        />
+      </div>
     </div>
   </div>
 </template>
