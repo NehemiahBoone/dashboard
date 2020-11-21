@@ -1,13 +1,25 @@
 <template>
   <div id="app" class="container">
     <div class="row mt-5" v-if="positive.length > 0">
-      <div class="col">
+      <div class="col-12">
         <h2>Positive</h2>
         <line-chart
           :chartData="positive"
           :options="chartOptions"
           label="Positive"
         />
+      </div>
+      <div class="col-12">
+        <h2>Hospitalized</h2>
+        <line-chart
+          :chartData="hospitalized"
+          :options="chartOptions"
+          label="Hospitalized"
+        />
+      </div>
+      <div class="col-12">
+        <h2>In ICU</h2>
+        <line-chart :chartData="inIcu" />
       </div>
     </div>
   </div>
