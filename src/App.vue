@@ -19,7 +19,7 @@
       </div>
       <div class="col-12">
         <h2>In ICU</h2>
-        <line-chart :chartData="inIcu" />
+        <line-chart :chartData="inIcu" :options="chartOptions" label="In ICU" />
       </div>
     </div>
   </div>
